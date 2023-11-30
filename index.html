@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mokup</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="./assets/assets/logo.svg" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <!-- <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Browse</a>
+              </li> -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Browse
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Landings
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Pages
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+                            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Accounts
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+        <div class="d-flex jumbotron w-100 justify-content-center">
+            <div class = "row w-80 h-100">
+                <div class="col-12 col-md-6 d-flex flex-column p-5">
+                    <div class="w-100">
+                        <h2 class="text-white">Welcome Web Students!</h2>
+                        <p class="text-secondary">Hank-picked Instructor and expertly crafted courses, designed for the modern 
+                            students and entrepreneur.
+                        </p>
+                        <div>
+                            <button type="button" class="btn btn-success">Browse Courses</button>
+                            <button type="button" class="btn btn-light"><b>Are You Instructor?</b></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="mini-nav w-100 bg-white">
+            <div class="row w-75 m-0 gy-2 mx-auto">
+                
+            </div>
+        </div>
+        <main class="bg-light w-100">
+            <div class="container W-75 p-5">
+                <h5>Recommended to you</h5>
+                <div id="carousel_1" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="100000">
+
+                        <div class="row">
+                            <div class="col-6 col-md-3">
+                                
+                                <div class="card w-100">
+                                    <img src="./assets/assets/course-graphql.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h6 class="card-title">GraphQL: introduction to graphQL for beginners</h6>
+                                        <div class="d-flex align-items-center justify-content-around">
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <div>2h 40</div>
+                                            <ion-icon name="cellular-outline"></ion-icon>
+                                            <div>Advance</div>
+                                        </div>
+                                        <div class="rating d-flex justify-content-start align-items-center" id="rating" data-rating="0">
+                                            <span class="star" data-value="1">&#9733;</span>
+                                            <span class="star" data-value="2">&#9733;</span>
+                                            <span class="star" data-value="3">&#9733;</span>
+                                            <span class="star" data-value="4">&#9733;</span>
+                                            <span class="star" data-value="5">&#9733;</span>
+                                            <div class="text-secondary fs-6">(1,500)</div>
+                                        </div>
+                                        <div class="d-flex pt-1">
+                                            <h5>$500</h5>
+                                            <h6 class="text-secondary fs-6"><s>$600</s></h6>
+                                        </div>
+                                    </div>
+                                    <br style="border-top: solid black 2px;">
+                                    <div class="card-body row justify-content-center align-items-center">
+                                      <div class="col-2"><img src="./assets/assets/avatar-5.jpg" alt="" style="width: 20px;"></div>
+                                      <div class="col-8"><p>Brooklyn Simmons</p></div>
+                                      <div class="col-2"><ion-icon name="bookmark-outline"></ion-icon></div>
+                                    </div>
+                                  </div>
+
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <img src="http://placehold.it/1600x900" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <img src="http://placehold.it/1600x900" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <img src="http://placehold.it/1600x900" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img src="http://placehold.it/1600x900" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="http://placehold.it/1600x900" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel_1" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel_1" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+        </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+ 
+</html>

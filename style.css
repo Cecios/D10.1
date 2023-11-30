@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+
+}
+*{
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.nav-item a{
+    color: black;
+}
+.jumbotron{
+    background-color: #6710f2e6;
+    max-height: 30%;
+}
+.jumbotron .row .col-12:last-of-type{
+    background-image: url('./assets/assets/hero-img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.icona {
+    background-color: antiquewhite;
+    border-radius: 50%;
+    color: rgb(173, 100, 4);
+  
+    width: 50px;
+    height: 50px;   
+}
+.rating {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.star {
+    color: #ccc;
+    display: inline-block;
+    transition: color 0.2s;
+}
+.star:hover{
+    color: #FFD700;
+}
