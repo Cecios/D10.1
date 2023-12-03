@@ -17,9 +17,7 @@ let mini_nav_items = [
 ]
 const mini_nav = document.querySelector(".mini-nav .row")
 const carousel_1 = document.querySelector("#carousel_1_active .row")
-const score = document.querySelector('.score')
-const stars = document.querySelectorAll('.rating ion-icon')
-const save = document.querySelector('.saveIcon ion-icon')
+
 const addItems = function(){
 
   for (let i = 0; i < mini_nav_items.length; i++) {
@@ -92,8 +90,16 @@ const addCarousel = function(){
 </div>
 <!-- END CARD -->
 </div>`
+
     }
+    
 }
+addItems();
+addCarousel();
+
+const score = document.querySelector('.score')
+const stars = document.querySelectorAll('.rating ion-icon')
+const save = document.querySelector('.saveIcon ion-icon')
 const fillStar = function(index){
     for (let i = 0; i <= index; i++) {
       // event.target.setAttribute('name','star')
@@ -113,8 +119,9 @@ const fillStar = function(index){
         score.innerHTML = '0.0' 
       }
   }
+  
   const fillSaveIcon = function(event){
-      
+      console.log(event);
       event.target.name = 'bookmark'
       if (event.type === "click") {
         save.removeEventListener("mouseleave", removeSaveIcon);
@@ -139,10 +146,10 @@ const fillStar = function(index){
       stars[i].onmouseleave = null; 
     };
   }
-addItems();
-addCarousel();
-  save.addEventListener("mouseover",fillSaveIcon);
-  save.addEventListener("mouseleave",removeSaveIcon);
-  save.addEventListener("click",fillSaveIcon);
+
+
+save.addEventListener("mouseover",fillSaveIcon);
+save.addEventListener("mouseleave",removeSaveIcon);
+save.addEventListener("click",fillSaveIcon);
 
 
