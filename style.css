@@ -5,39 +5,54 @@ body{
 *{
     object-fit: cover;
     box-sizing: border-box;
+    font-size: clamp(0.8rem,1.3vw,1.5rem);
 }
 .nav-item a{
     color: black;
 }
 .jumbotron{
-    background-color: #6710f2e6;
+    background-color: #7550FE;
     max-height: 30%;
 }
 .jumbotron .row .col-12:last-of-type{
     background-image: url('./assets/assets/hero-img.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-    
 }
 .icona {
     background-color: antiquewhite;
     border-radius: 50%;
     color: rgb(173, 100, 4);
-  
-    width: 50px;
-    height: 50px;   
+ 
 }
-.rating {
-    font-size: 24px;
+.rating ion-icon{
+    color: #FFAA46;
     cursor: pointer;
 }
 
-.star {
-    color: #ccc;
-    display: inline-block;
-    transition: color 0.2s;
+.navbar-toggler-icon {
+    color: #7550FE;
+    border: solid 1px #7550FE;
+    border-radius: 15%; 
 }
-.star:hover{
-    color: #FFD700;
+.email-badge {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; 
+    background-color: #FFEEDA; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ion-email {
+    font-size: 24px; 
+    color: #C28135;
+}
+.card:hover{
+    transform: scale(1.1);
+    transition-delay: 0.2s;
+    box-shadow: 4px 10px 10px gray;
+
 }

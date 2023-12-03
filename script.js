@@ -16,42 +16,133 @@ let mini_nav_items = [
       }
 ]
 const mini_nav = document.querySelector(".mini-nav .row")
-const carousel_1 = document.querySelector("#carousel_1 .row")
-
+const carousel_1 = document.querySelector("#carousel_1_active .row")
+const score = document.querySelector('.score')
+const stars = document.querySelectorAll('.rating ion-icon')
+const save = document.querySelector('.saveIcon ion-icon')
 const addItems = function(){
-    for (let i = 0; i < 4; i++) {
-        console.log(mini_nav_items.h);
-        carousel_1.innerHTML += `<div class="col-3">
-                                
-        <div class="card w-100">
-            <img src="./assets/assets/course-graphql.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h6 class="card-title">GraphQL: introduction to graphQL for beginners</h6>
-                <div class="d-flex align-items-center justify-content-around">
-                    <ion-icon name="time-outline"></ion-icon>
-                    <div>2h 40</div>
-                    <ion-icon name="cellular-outline"></ion-icon>
-                    <div>Advance</div>
-                </div>
-                <div class="rating" id="rating" data-rating="0">
-                    <span class="star" data-value="1">&#9733;</span>
-                    <span class="star" data-value="2">&#9733;</span>
-                    <span class="star" data-value="3">&#9733;</span>
-                    <span class="star" data-value="4">&#9733;</span>
-                    <span class="star" data-value="5">&#9733;</span>
-                </div>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
 
-    </div>`
+  for (let i = 0; i < mini_nav_items.length; i++) {
+    mini_nav.innerHTML += `<div class="col-12 col-md-4">
+    <div class="d-flex">
+      <div class="d-flex w-25 justify-content-center">
+        <div class="email-badge">
+         <i class="ion-email w-100 d-flex justify-content-center">
+          <ion-icon class="fs-5" name="${mini_nav_items[i].icon}"></ion-icon>
+        </i>
+        </div>
+      </div>
+      <div class="w-75">
+        <p><b>${mini_nav_items[i].h}</b><br>${mini_nav_items[i].p}</p>
+      </div>
+    </div>
+  </div>`
+  }
+
+}
+const addCarousel = function(){
+    for (let i = 0; i < 4; i++) {
+
+        carousel_1.innerHTML += `<div class="col-6 col-md-3 gy-1 m-0">
+                                
+        <!-- BGN CARD -->
+<div class="card w-100">
+<img src="./assets/assets/course-graphql.jpg" class="card-img-top" alt="corso-1">
+<div class="card-body d-flex flex-wrap pb-2 w-100 p-1">
+<div class="w-100"> 
+<h6 class="card-title w-100 d-block">GraphQL: introduction to graphQL for beginners</h6>
+</div>
+<div class="w-100 d-flex align-items-center pb-2" style="gap: 5px;">
+<ion-icon name="time-outline"></ion-icon>
+<div>2h 40</div>
+<ion-icon name="cellular-outline"></ion-icon>
+<div>Advance</div>
+</div>
+
+<div class="w-100 rating d-flex justify-content-start align-items-center pb-2" id="rating" data-rating="0">
+<div class="rating d-flex w-100 align-items-center  ">
+<ion-icon name="star-outline"></ion-icon>
+<ion-icon name="star-outline"></ion-icon>
+<ion-icon name="star-outline"></ion-icon>
+<ion-icon name="star-outline"></ion-icon>
+<ion-icon name="star-outline"></ion-icon>
+<div class="score p-2" style="color: #FFAA46 ;">0.0</div>
+<div class="text-secondary fs-6">(1,500)</div>
+</div>
+</div>
+
+<div class="d-flex w-100 pt-1 pb-2">
+<h5>$500</h5>
+<h6 class="text-secondary fs-6 m-0 ps-2 pt-1"><s>$600</s></h6>
+</div>
+
+</div>
+<ul class="list-group list-group-flush w-100">
+<li class="list-group-item px-1 w-100">
+
+<div class="d-flex align-self-center pe-0 w-100"> 
+<div class="  align-items-center">
+<div class=""><img src="./assets/assets/avatar-5.jpg" alt="avatar" style="width: 20px;" class="rounded-circle"></div>
+</div>
+<div class=" ps-2 pe-4 text-nowrap">Brooklyn Simmons</div>
+<div class="saveIcon"><ion-icon name="bookmark-outline"></ion-icon></div>
+</div>
+</li>
+</ul>
+</div>
+<!-- END CARD -->
+</div>`
     }
 }
-//  addItems();
-// addCarousel()
+const fillStar = function(index){
+    for (let i = 0; i <= index; i++) {
+      // event.target.setAttribute('name','star')
+      if (i <= index) {
+        stars[i].name = "star";
+        score.innerHTML = index+1 +'.0'      
+      }
+      else{
+        stars[i].name = "star-outline";
+      }
+    }
+
+  }
+  const toggleStar = function(index){
+      for (let i = 0; i <= index; i++) {
+        stars[i].name = "star-outline" 
+        score.innerHTML = '0.0' 
+      }
+  }
+  const fillSaveIcon = function(event){
+      
+      event.target.name = 'bookmark'
+      if (event.type === "click") {
+        save.removeEventListener("mouseleave", removeSaveIcon);
+
+      }
+    
+    }
+  const removeSaveIcon = function(event){
+      event.target.name = 'bookmark-outline'
+    }
+
+
+  for (let i = 0; i < stars.length; i++) {
+    stars[i].onmouseover = function(){
+      fillStar(i);
+    };
+    stars[i].onmouseleave = function (){
+      toggleStar(i);  
+    }
+    stars[i].onclick = function() {
+      fillStar(i);
+      stars[i].onmouseleave = null; 
+    };
+  }
+addItems();
+addCarousel();
+  save.addEventListener("mouseover",fillSaveIcon);
+  save.addEventListener("mouseleave",removeSaveIcon);
+  save.addEventListener("click",fillSaveIcon);
+
+
