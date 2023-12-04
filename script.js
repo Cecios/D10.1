@@ -76,7 +76,7 @@ const addCarousel = function(){
 
 </div>
 <ul class="list-group list-group-flush w-100">
-<li class="list-group-item px-1 w-100">
+<li class="list-group-item px-0 w-100">
 
 <div class="d-flex align-self-center pe-0 w-100"> 
 <div class="  align-items-center">

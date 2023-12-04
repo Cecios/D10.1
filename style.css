@@ -73,3 +73,7 @@ body{
     left: 30px;
     top: 6px;
 }
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: lightgray!important;
+    border-radius: 50%;
+}
