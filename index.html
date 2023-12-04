@@ -8,13 +8,11 @@
 <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
+  <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="./assets/assets/logo.svg" alt=""></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon d-flex justify-content-center align-items-center"><ion-icon name="menu-outline"></ion-icon></span>
-          </button>
+
           <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
               <!-- <li class="nav-item">
@@ -66,6 +64,34 @@
               </li>
             </ul>
           </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <div id="email" class="email-badge position-relative">
+                        <i class="bi bi-bell w-100 d-flex justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
+                        </svg></i>
+                        <span class="absolute position-absolute  translate-middle p-1 bg-danger border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div id="email1" class="email-badge position-relative">
+                        <img class="w-100 rounded-circle" src="./assets/assets/avatar-1.jpg" alt="avatar-1">
+                        <span class="position-absolute end-0 bottom-0 translate-middle p-1 bg-success border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon d-flex justify-content-center align-items-center"><ion-icon name="menu-outline"></ion-icon></span>
+                    </button>
+                </div>
+            </div>
+
         </div>
       </nav>
     </header>

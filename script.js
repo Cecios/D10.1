@@ -99,57 +99,69 @@ addCarousel();
 
 const score = document.querySelector('.score')
 const stars = document.querySelectorAll('.rating ion-icon')
-const save = document.querySelector('.saveIcon ion-icon')
-const fillStar = function(index){
-    for (let i = 0; i <= index; i++) {
+const save = document.querySelectorAll('.saveIcon ion-icon')
+const fillStar = function(event,index){
+  const starPerCard = event.target.closest('.card').querySelectorAll("ion-icon[name*=star]")
+    for (let i = 0; i <= starPerCard.length; i++) {
       // event.target.setAttribute('name','star')
+      console.log(starPerCard[i].name);
       if (i <= index) {
-        stars[i].name = "star";
+        starPerCard[i].name = "star";
         score.innerHTML = index+1 +'.0'      
       }
       else{
-        stars[i].name = "star-outline";
+        starPerCard[i].name = "star-outline";
       }
     }
 
   }
-  const toggleStar = function(index){
+  const toggleStar = function(event,index){
       for (let i = 0; i <= index; i++) {
         stars[i].name = "star-outline" 
         score.innerHTML = '0.0' 
       }
   }
   
-  const fillSaveIcon = function(event){
-      console.log(event);
-      event.target.name = 'bookmark'
-      if (event.type === "click") {
-        save.removeEventListener("mouseleave", removeSaveIcon);
-
-      }
+  const fillSaveIcon = function(event,index){
     
+      event.target.name = 'bookmark'
+      // if (event.type === "click") {
+      //     console.log(event);
+      // }  
     }
   const removeSaveIcon = function(event){
       event.target.name = 'bookmark-outline'
     }
 
+  for (let i = 0; i < save.length; i++) {
+    save[i].onmouseover = function(event){
+      fillSaveIcon(event,i)
+    }
+    save[i].onmouseleave = function(event){
+      removeSaveIcon(event,i)
+    }
+    save[i].onclick = function(event){
+      fillSaveIcon(event,i)
+      save[i].onmouseleave = null;
+    }
+  }
 
   for (let i = 0; i < stars.length; i++) {
-    stars[i].onmouseover = function(){
-      fillStar(i);
+    stars[i].onmouseover = function(event){
+      fillStar(event,i);
     };
-    stars[i].onmouseleave = function (){
-      toggleStar(i);  
+    stars[i].onmouseleave = function (event){
+      toggleStar(event,i);  
     }
-    stars[i].onclick = function() {
-      fillStar(i);
+    stars[i].onclick = function(event) {
+      fillStar(event,i);
       stars[i].onmouseleave = null; 
     };
   }
 
 
-save.addEventListener("mouseover",fillSaveIcon);
-save.addEventListener("mouseleave",removeSaveIcon);
-save.addEventListener("click",fillSaveIcon);
+// save.addEventListener("mouseover",fillSaveIcon);
+// save.addEventListener("mouseleave",removeSaveIcon);
+// save.addEventListener("click",fillSaveIcon);
 
 
